@@ -1,0 +1,16 @@
+PODS:
+  - Prettier.swift (1.0)
+
+DEPENDENCIES:
+  - Prettier.swift (from `../`)
+
+EXTERNAL SOURCES:
+  Prettier.swift:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Prettier.swift: 6ca0ba1e7830cbfb033d433a6d7abb42aaa284c7
+
+PODFILE CHECKSUM: f7ea60065e63cddf39aabac564ae6b3e45f2b5c4
+
+COCOAPODS: 1.8.1
