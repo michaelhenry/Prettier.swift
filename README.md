@@ -19,6 +19,25 @@ it, simply add the following line to your Podfile:
 pod 'Prettier.swift'
 ```
 
+# How to use
+
+```swift
+import Prettier_swift
+
+let prettier = Prettier()
+let input = "{\"id\":1,\"name\":\"Michael Henry\"}"
+let output = prettier.prettify(input, parser: .jsonStringify)!
+print(output)
+let expected_output =
+"""
+{
+  "id": 1,
+  "name": "Michael Henry"
+}
+"""
+XCTAssertEqual(output, expected_output)
+```
+
 ## Author
 
 Michael Henry Pantaleon, me@iamkel.net
