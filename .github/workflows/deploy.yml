@@ -18,7 +18,11 @@ jobs:
         pod install --project-directory=Example
       env:
         DEVELOPER_DIR: /Applications/Xcode_11.app
-    - uses: michaelhenry/deploy-to-cocoapods-github-action@1.0.9
+    - name: Deploy to Cocoapods
+      run: |
+        set -eo pipefail
+        pod lib lint --allow-warning
+        pod trunk push --allow-warnings
       env:
         COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
         DEVELOPER_DIR: /Applications/Xcode_11.app
