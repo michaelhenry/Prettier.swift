@@ -27,7 +27,7 @@ import Prettier_swift
 let prettier = Prettier()
 let input = "{\"id\":1,\"name\":\"Michael Henry\"}"
 let output = prettier.prettify(input, parser: .jsonStringify)!
-print(output)
+
 let expected_output =
 """
 {
