@@ -58,6 +58,7 @@ let expected_output =
     <p>hello</p>
   </body>
 </html>
+
 """
 
 XCTAssertEqual(output, expected_output)
