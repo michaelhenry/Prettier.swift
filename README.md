@@ -34,6 +34,7 @@ let expected_output =
   "id": 1,
   "name": "Michael Henry"
 }
+
 """
 XCTAssertEqual(output, expected_output)
 ```
