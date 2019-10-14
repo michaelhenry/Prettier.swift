@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
   s.name             = 'Prettier.swift'
   s.version          = ENV['LIB_VERSION'] || '1.0'
-  s.summary          = 'A swifty wrapper for the opinionated code formatter.'
+  s.summary          = 'Prettier.io wrapper for swift. An opinionated code formatter.'
 
   s.description      = <<-DESC
-A swifty wrapper for the opinionated code formatter.
+Prettier.io wrapper for swift. An opinionated code formatter.
                        DESC
 
   s.homepage         = 'https://github.com/michaelhenry/Prettier.swift'
