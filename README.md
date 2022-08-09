@@ -64,6 +64,26 @@ let expected_output =
 XCTAssertEqual(output, expected_output)
 ```
 
+### GRAPHQL
+```swift
+import Prettier_swift
+
+let prettier = Prettier()
+let input = "{human(id:\"1000\"){name height}}"
+let output = prettier.prettify(input, parser: .graphql)
+
+let expected_output =
+"""
+{
+  human(id: "1000") {
+    name
+    height
+  }
+}
+
+"""
+XCTAssertEqual(output, expected_output)
+```
 ### AND MORE!
 
 

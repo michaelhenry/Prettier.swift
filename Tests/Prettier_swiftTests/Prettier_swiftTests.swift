@@ -47,4 +47,21 @@ body {
 """
         XCTAssertEqual(output, expected_output)
     }
+
+    func testGraphQL() {
+        let prettier = Prettier()
+        let input = "{human(id:\"1000\"){name height}}"
+        let output = prettier.prettify(input, parser: .graphql)
+        let expected_output =
+        """
+{
+  human(id: "1000") {
+    name
+    height
+  }
+}
+
+"""
+        XCTAssertEqual(output, expected_output)
+    }
 }
