@@ -3,6 +3,7 @@
 [![Version](https://img.shields.io/cocoapods/v/Prettier.swift.svg?style=flat)](https://cocoapods.org/pods/Prettier.swift)
 [![License](https://img.shields.io/cocoapods/l/Prettier.swift.svg?style=flat)](https://cocoapods.org/pods/Prettier.swift)
 [![Platform](https://img.shields.io/cocoapods/p/Prettier.swift.svg?style=flat)](https://cocoapods.org/pods/Prettier.swift)
+[![codecov](https://codecov.io/gh/michaelhenry/Prettier.swift/branch/master/graph/badge.svg?token=CE1AKGDJ4K)](https://codecov.io/gh/michaelhenry/Prettier.swift)
 
 [Prettier.io](https://prettier.io/) wrapper for swift. An opinionated code formatter.
 
@@ -15,8 +16,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-Prettier.swift is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+Prettier.swift is available via SPM or Cocoapods.
 
 ```ruby
 pod 'Prettier.swift'
