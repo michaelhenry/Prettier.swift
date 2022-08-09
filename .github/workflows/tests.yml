@@ -3,21 +3,34 @@ name: tests
 on: [push]
 
 jobs:
-  build:
-
+  build-test-cocoapods:
     runs-on: macOS-latest
-
     steps:
     - uses: actions/checkout@v1
     - name: Install Cocoapods
       run: |
         gem install cocoapods
         pod install --project-directory=Example
-      env:
-        DEVELOPER_DIR: /Applications/Xcode_11.app
     - name: Run Test
       run: |
         set -eo pipefail
         xcodebuild test -enableCodeCoverage YES -workspace Example/Prettier.swift.xcworkspace -scheme Prettier_Swift_Example -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11' | xcpretty
+
+  build-test-spm:
+    runs-on: macOS-latest
+    steps:
+    - uses: actions/checkout@v1
+    - run: swift test --enable-code-coverage
+    - uses: michaelhenry/swifty-code-coverage@v1.0.0
+      with:
+        build-path: .build
+        target: Prettier_swiftPackageTests.xctest
+        is-spm: true
+        output: "coverage/lcov.info"
+        output-artifact-name: "codecov-artifact"
+    - name: Upload to Codecov
+      run: |
+        bash <(curl https://codecov.io/bash) -f "coverage/*.info"
+      shell: bash
       env:
-        DEVELOPER_DIR: /Applications/Xcode_11.app
+        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
