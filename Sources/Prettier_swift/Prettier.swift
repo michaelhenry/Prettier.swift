@@ -1,6 +1,6 @@
 import JavaScriptCore
 public class Prettier {
-    
+
     public enum Parser:String {
         case flow
         case babel
@@ -21,12 +21,18 @@ public class Prettier {
         case angular
         case lwc
     }
-    
-    private var context:JSContext = JSContext()!
-    
-    public init() {
 
-        let bundle = Bundle(for: Prettier.self)
+    private let context: JSContext
+    private let bundle: Bundle
+
+    public init() {
+        context = JSContext()
+#if SWIFT_PACKAGE
+        bundle = Bundle.module
+#else
+        bundle = Bundle(for: Self.self)
+#endif
+
         let prettierLibs = [
             "standalone",
             "parser-angular",
@@ -39,14 +45,14 @@ public class Prettier {
             "parser-postcss",
             "parser-typescript",
         ]
+
         prettierLibs.forEach {
-            if let url = bundle
-                .path(forResource: $0, ofType: "js") {
-                let script = try? String(contentsOfFile: url)
+            if let url = bundle.url(forResource: $0, withExtension: "js") {
+                let script = try? String(contentsOf: url)
                 context.evaluateScript(script)
             }
         }
-       
+
         // Create prettify() function
         context.evaluateScript("""
           function prettify(n, parser) {
@@ -58,12 +64,14 @@ public class Prettier {
           }
       """)
     }
-    
+
     public func prettify(_ code:String, parser:Parser) -> String? {
         let prettifyFn = context.objectForKeyedSubscript("prettify")!
-        guard let result = prettifyFn
-            .call(withArguments:[code, parser.rawValue]).toString(),
+        guard
+            let result = prettifyFn.call(withArguments:[code, parser.rawValue]).toString(),
             result != "undefined" else { return nil }
         return result
     }
 }
+
+
