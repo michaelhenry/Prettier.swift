@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1731E32628A2829400390145 /* Prettier_swiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1731E32528A2829400390145 /* Prettier_swiftTests.swift */; };
 		A6288F3E234F69DC00088697 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6288F3D234F69DC00088697 /* AppDelegate.swift */; };
 		A6288F40234F69DC00088697 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6288F3F234F69DC00088697 /* SceneDelegate.swift */; };
 		A6288F42234F69DC00088697 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6288F41234F69DC00088697 /* ContentView.swift */; };
 		A6288F44234F69DF00088697 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6288F43234F69DF00088697 /* Assets.xcassets */; };
 		A6288F47234F69DF00088697 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6288F46234F69DF00088697 /* Preview Assets.xcassets */; };
 		A6288F4A234F69DF00088697 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6288F48234F69DF00088697 /* LaunchScreen.storyboard */; };
-		A6288F55234F69DF00088697 /* Prettier_Swift_ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6288F54234F69DF00088697 /* Prettier_Swift_ExampleTests.swift */; };
 		CCC05897C6D85CEE55878BE5 /* Pods_Prettier_Swift_ExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB059759247E256E0997DEB /* Pods_Prettier_Swift_ExampleTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1731E32428A2829400390145 /* Prettier_Swift_ExampleTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Prettier_Swift_ExampleTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		1731E32528A2829400390145 /* Prettier_swiftTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Prettier_swiftTests.swift; path = ../../Tests/Prettier_swiftTests/Prettier_swiftTests.swift; sourceTree = "<group>"; };
 		27F6C20B78DC85FC169CAE82 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		64A30D67E3883FDAEEF56BAA /* Pods-Prettier.swift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Prettier.swift_Tests.release.xcconfig"; path = "Target Support Files/Pods-Prettier.swift_Tests/Pods-Prettier.swift_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		85058150523E61BA160E3722 /* Prettier.swift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Prettier.swift.podspec; path = ../Prettier.swift.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -41,7 +43,6 @@
 		A6288F49234F69DF00088697 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A6288F4B234F69DF00088697 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6288F50234F69DF00088697 /* Prettier_Swift_ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Prettier_Swift_ExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A6288F54234F69DF00088697 /* Prettier_Swift_ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prettier_Swift_ExampleTests.swift; sourceTree = "<group>"; };
 		A6288F56234F69DF00088697 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB2FBC68BA3A67C9014868C5 /* Pods-Prettier.swift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Prettier.swift_Tests.debug.xcconfig"; path = "Target Support Files/Pods-Prettier.swift_Tests/Pods-Prettier.swift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		ADB059759247E256E0997DEB /* Pods_Prettier_Swift_ExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Prettier_Swift_ExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,8 +135,9 @@
 		A6288F53234F69DF00088697 /* Prettier_Swift_ExampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				A6288F54234F69DF00088697 /* Prettier_Swift_ExampleTests.swift */,
+				1731E32528A2829400390145 /* Prettier_swiftTests.swift */,
 				A6288F56234F69DF00088697 /* Info.plist */,
+				1731E32428A2829400390145 /* Prettier_Swift_ExampleTests-Bridging-Header.h */,
 			);
 			path = Prettier_Swift_ExampleTests;
 			sourceTree = "<group>";
@@ -179,7 +181,7 @@
 				A6288F4C234F69DF00088697 /* Sources */,
 				A6288F4D234F69DF00088697 /* Frameworks */,
 				A6288F4E234F69DF00088697 /* Resources */,
-				B1C7D58C5B2CF7D73AD99936 /* [CP] Embed Pods Frameworks */,
+				121755EF7FB8AD81EDBB49ED /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -207,6 +209,7 @@
 					};
 					A6288F4F234F69DF00088697 = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1340;
 						ProvisioningStyle = Automatic;
 						TestTargetID = A6288F3A234F69DC00088697;
 					};
@@ -252,7 +255,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B1C7D58C5B2CF7D73AD99936 /* [CP] Embed Pods Frameworks */ = {
+		121755EF7FB8AD81EDBB49ED /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -309,7 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6288F55234F69DF00088697 /* Prettier_Swift_ExampleTests.swift in Sources */,
+				1731E32628A2829400390145 /* Prettier_swiftTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,6 +509,7 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -522,6 +526,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "net.iamkel.Prettier-Swift-ExampleTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "Prettier_Swift_ExampleTests/Prettier_Swift_ExampleTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Prettier_Swift_Example.app/Prettier_Swift_Example";
@@ -537,6 +543,7 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -550,6 +557,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.iamkel.Prettier-Swift-ExampleTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Prettier_Swift_ExampleTests/Prettier_Swift_ExampleTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Prettier_Swift_Example.app/Prettier_Swift_Example";
