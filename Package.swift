@@ -22,7 +22,16 @@ let package = Package(
             name: "Prettier_swift",
             dependencies: [],
             resources: [
-                .copy("Resources")
+              .copy("JS/standalone.js"),
+              .copy("JS/parser-angular.js"),
+              .copy("JS/parser-flow.js"),
+              .copy("JS/parser-babylon.js"),
+              .copy("JS/parser-glimmer.js"),
+              .copy("JS/parser-graphql.js"),
+              .copy("JS/parser-html.js"),
+              .copy("JS/parser-markdown.js"),
+              .copy("JS/parser-postcss.js"),
+              .copy("JS/parser-typescript.js")
             ]),
         .testTarget(
             name: "Prettier_swiftTests",

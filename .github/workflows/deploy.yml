@@ -16,9 +16,7 @@ jobs:
       run: |
         gem install cocoapods
         pod install --project-directory=Example
-      env:
-        DEVELOPER_DIR: /Applications/Xcode_11.app
     - uses: michaelhenry/deploy-to-cocoapods-github-action@1.0.9
       env:
         COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
-        DEVELOPER_DIR: /Applications/Xcode_11.app
+

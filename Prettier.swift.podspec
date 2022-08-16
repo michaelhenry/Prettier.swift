@@ -14,5 +14,5 @@ Prettier.io wrapper for swift. An opinionated code formatter.
   s.social_media_url = 'https://twitter.com/michaelhenry119'
   s.ios.deployment_target = '10.0'
   s.source_files = 'Sources/Prettier_swift/**/*.swift'
-  s.resources = 'Sources/Prettier_swift/Resources/**/*'
+  s.resources = 'Sources/Prettier_swift/JS/**/*'
 end
