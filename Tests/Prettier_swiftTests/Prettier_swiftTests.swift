@@ -10,7 +10,7 @@ final class Prettier_swiftTests: XCTestCase {
         let expected_output =
         """
 {
-  "id": 10,
+  "id": 100,
   "name": "Michael Henry"
 }
 
